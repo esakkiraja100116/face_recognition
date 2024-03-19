@@ -1,24 +1,5 @@
-print("hello world")
 
-import pymongo
+def hello_world():
+    return "Hello, World!"
 
-def getConnection(db_id):
-    print("Hello world")
-
-def checkTest():
-    print("we are testing it")
-
-def getCategory(category_id):
-    try:
-        # Connect to the database
-        client = pymongo.MongoClient("mongodb://localhost:27017/")
-        db = client["mydatabase"]
-        category_collection = db["category"]
-
-        # Query the category collection for the specified category_id
-        category = category_collection.find_one({"_id": category_id})
-
-        return category
-    except pymongo.errors.ConnectionFailure as e:
-        print("Error connecting to the database:", e)
-        return None
+print(hello_world())
