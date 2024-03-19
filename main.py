@@ -5,6 +5,9 @@ import pymongo
 def getConnection(db_id):
     print("Hello world")
 
+def checkTest():
+    print("we are testing it")
+
 def getCategory(category_id):
     try:
         # Connect to the database
